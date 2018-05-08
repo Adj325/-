@@ -19,15 +19,17 @@
 ![](res/03.jpg)
 
 ## 签到破解成果
+
+### 视频/图编辑自：[C艹](https://github.com/dcLunatic)
+
 - 视频
 
-<video src="res/sign_example.flv">浏览器不支持视频播放</video>
+  <video src="res/sign_example.flv">浏览器不支持视频播放</video>
 
 - GIF
 
-![](res/sign_example.gif)
+  ![](res/sign_example.gif)
 
 ## 总结:
 
->有些人, 是不能被禁锢的!
-有些事, 这辈子都不可能做的!
+>有些人, 是不能被禁锢的!<br>有些事, 这辈子都不可能做的!
