@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp" >
+        <TextView
+            android:id="@+id/HookTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#CCCCCC"
+            android:paddingTop="5dp"
+            android:text="Hook" />
+        <Switch
+            android:id="@+id/HookSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+                android:id="@+id/ToastTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/HookTextView"
+            android:background="#CCCCCC"
+            android:paddingTop="5dp"
+            android:text="Toast" />
+        <Switch
+            android:id="@+id/ToastSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/HookTextView"
+            android:layout_below="@+id/HookTextView" />
+
+
+        <TextView
+            android:id="@+id/KjcLogTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/ToastTextView"
+            android:paddingTop="5dp"
+            android:background="#CCCCCC"
+            android:text="KjcLog" />
+        <Switch
+            android:id="@+id/KjcLogSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/ToastTextView"
+            android:layout_below="@+id/ToastTextView" />
+
+        <TextView
+            android:id="@+id/XposedLogTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/KjcLogTextView"
+            android:paddingTop="5dp"
+            android:background="#CCCCCC"
+            android:text="XposedLog" />
+        <Switch
+            android:id="@+id/XposedLogSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/KjcLogTextView"
+            android:layout_below="@+id/KjcLogTextView" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:paddingTop="10dp"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="onClick"
+                    android:layout_gravity="center"
+                    android:contentDescription="上传照片" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="11dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_weight="1" >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:textSize="20sp"
+                    android:text="Pick Up An Image" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
