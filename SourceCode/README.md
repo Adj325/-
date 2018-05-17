@@ -113,6 +113,8 @@ public String exec(int bridgeSecret, String service, String action, String callb
   服务器那边就无法看到我们的照片，可是服务器能看到我们的**验证通过**的状态。
 
   只要咬定软件出问题，谁也无法折腾你，谁让它验证通过了呢？
+  
+  软件并未提供此功能，有需要请自己实现！
 
 ### 2.5 一些对源代码的介绍
 
@@ -179,6 +181,3 @@ XP hook method时， 需要提供一个classloader。
   折腾它吧，蓝牙也贼恶心的！
 
   折腾成功的话，发我一份，谢谢！
-
-
-
