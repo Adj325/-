@@ -181,3 +181,31 @@ XP hook method时， 需要提供一个classloader。
   折腾它吧，蓝牙也贼恶心的！
 
   折腾成功的话，发我一份，谢谢！
+  
+
+### 3.5 蓝牙验证解决方案_2018.07.08
+
+- 脱壳工具
+  
+  [Fdex2](https://bbs.pediy.com/thread-224105.htm)
+  
+- 折腾
+
+  在于同学的折腾中，我们使用Fdex2对考勤助手进行脱壳，拿到了源代码。看到了Ble及Face库的代码，在其中，并没有发现早前猜想的蓝牙算法。若模块中不存在蓝牙协商算法，那算法就有可能在js中，经过很恶心的分析后，什么也没得到，代码混淆得太厉害了。
+  
+  在这个过程中，我们不断地分析旧日志，再次确定了，应该不存在蓝牙协商算法。蓝牙发射器应该仅是广播一种特殊信号，手机搜蓝牙时会能区分手机/音频设备，所以说，考勤助手调用蓝牙模块查看周围的蓝牙设备，若存在特殊的蓝牙设备，就允许有课的用户进行签到。
+  
+  如此，只要拦截BlueteethLePlugin的execute中的startScan(实质是该类的b(Json..., CallBack..)方法)，每次都手动添加一个特殊设备就可实现：在哪里都可以签到！设备的特殊性，也是需要拦截调试后获取。
+  
+  由于蓝牙发射设备被学校收回去了，以上的思路都还没真正地去执行。
+  
+- 无需xposed
+
+  由于获取到了真正解密后的dex，只要修改smail，达到加载本地照片，永远特殊蓝牙就好！
+  
+  修改后，需要把AndroidManifest.xml
+  ```
+   <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true">
+  ```
+  中的com.tencent.StubShell.TxAppEntry改成com.mybofeng.assist.MainActivity后，才能打开软件。
+  
