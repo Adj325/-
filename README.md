@@ -20,7 +20,7 @@
 
 ## 签到破解成果
 
-### 视频/图编辑自：[C艹](https://github.com/dcLunatic)
+### 视频/图编辑自：[dcLunatic](https://github.com/dcLunatic)
 
 - 视频
 
